@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/index.css">
-    <title>Document</title>
+    <title>Financial Web App</title>
 </head>
 
 <body>
     <h1>Financial Web App</h1>
-    <form action="/makersuite" method="'post">
+
+    <form action="/gemini" method="post">
+        <input type="text" name="query" placeholder="Ask Gemini..." required />
         <input type="submit" value="Gemini Chatbot" />
     </form>
+
+    {% if response %}
+    <h2>Gemini's Response:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
 </body>
 
 </html>
